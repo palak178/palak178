@@ -11,14 +11,14 @@ infrastructure that keeps both auditable and cheap to run.
 
 ```mermaid
 flowchart LR
-    U([request]) --> P[LLM: plan & route]
-    P -->|selects tool| T{{typed tool registry}}
-    T --> D[deterministic services<br/>scoring · eligibility · compliance]
-    T --> R[(retrieval<br/>vector + graph)]
-    D --> G[guardrails<br/>groundedness · policy]
+    U(["request"]) --> P["LLM: plan and route"]
+    P -->|"selects tool"| T{{"typed tool registry"}}
+    T --> D["deterministic services<br/>scoring · eligibility · compliance"]
+    T --> R[("retrieval<br/>vector + graph")]
+    D --> G["guardrails<br/>groundedness · policy"]
     R --> G
-    G --> O([auditable answer<br/>+ reasoning trace])
-    P -.->|never computes a score<br/>never asserts a fact| D
+    G --> O(["auditable answer<br/>+ reasoning trace"])
+    P -.->|"never computes a score<br/>never asserts a fact"| D
 ```
 
 The LLM plans, routes and explains. It never computes a score or asserts a fact — that
