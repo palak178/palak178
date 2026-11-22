@@ -53,12 +53,18 @@ stays with deterministic code. It's the only way an AI decision survives a regul
 </details>
 
 <details>
-<summary><b>LLM_Chatbot</b> — RAG over uploaded documents</summary>
+<summary><b>ragkit</b> — grounded RAG with verified citations</summary>
 
-> Answers grounded strictly in retrieved passages, with embeddings persisted to a vector
-> store so the same corpus isn't re-embedded on every session.
+> A cited answer or an explicit refusal, never an uncited one. The model proposes an answer
+> *and the evidence it used*; deterministic code then looks for each quote in the passage it
+> was attributed to. A quote that isn't there is not evidence, so the answer is withheld —
+> and one unverifiable citation withholds the whole answer, not just that sentence.
+>
+> Ships an eval harness, because "95% accuracy" isn't checkable without a metric and a query
+> count. It scores correct *refusals* separately, since answering everything would otherwise
+> look perfect.
 
-`SentenceTransformer` · `Qdrant` · `Streamlit`
+`two deterministic gates` · `Qdrant` · `FastAPI` · `191 tests, offline`
 
 → [github.com/palak178/LLM_Chatbot](https://github.com/palak178/LLM_Chatbot)
 </details>
@@ -96,13 +102,13 @@ Embeddings · Knowledge Graphs
 
 Intelligent Document Processing (IDP) · Structured / Unstructured Parsing · OCR ·
 Borderless Table Parsing · Markdown &amp; HTML Conversion · Image / Audio / Video
-Ingestion · Speech-to-Text · Speaker Diarization · Web Scraping
+Ingestion · Speech-to-Text · Web Scraping
 </details>
 
 <details>
 <summary><b>ML &amp; NLP</b></summary>
 
-Machine Learning · Deep Learning · NLP · Transformers · Hugging Face · PyTorch ·
+Machine Learning · NLP · Transformers · Hugging Face · PyTorch ·
 TensorFlow · Scikit-learn · Computer Vision · OpenCV · Pandas · NumPy
 </details>
 
@@ -122,7 +128,7 @@ Microservices · Async Processing · Horizontal Scaling · SQL
 Qdrant · Weaviate · ChromaDB · Neo4j
 
 **Cloud &amp; DevOps** — Azure · AWS · Docker · CI/CD · Git · Linux · GPU Inference ·
-Grafana · LangSmith
+Grafana
 </details>
 
 ---
@@ -142,5 +148,8 @@ Grafana · LangSmith
 
 Interested in stateful agent graphs, retrieval quality you can actually measure,
 multi-tenant isolation, and keeping token cost bounded under concurrency.
+
+Based in India, working remote-first for three years including US client delivery.
+Open to remote roles globally.
 
 📫 **palak.namdev1701@gmail.com** · [LinkedIn](https://www.linkedin.com/in/palak-namdev)
