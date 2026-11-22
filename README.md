@@ -9,7 +9,7 @@ through to deployment and production support.
 
 ---
 
-## One idea, in every repository below
+## Where the model decides — and where it doesn't
 
 > **The LLM plans; deterministic code decides.**
 
@@ -28,7 +28,8 @@ flowchart LR
     P -.->|"never computes a score<br/>never asserts a fact"| D
 ```
 
-It is not an abstract preference — it is the same seam in five different problems:
+The same seam, sitting in a different place in each project — including two where no model is
+in the decision path at all:
 
 | Project | The model proposes | Plain code decides |
 |---|---|---|
@@ -38,8 +39,8 @@ It is not an abstract preference — it is the same seam in five different probl
 | **audio-transcription-pipeline** | — | when to window, retry, resume, give up |
 | **llmgate** | — | whether a request can be sent at all |
 
-The last two have no model in the decision path by design. That is the point: most of what
-makes an LLM system trustworthy is not the LLM.
+That absence is the point rather than a gap: most of what makes an LLM system trustworthy is
+not the LLM.
 
 ---
 
