@@ -66,7 +66,7 @@ stays with deterministic code. It's the only way an AI decision survives a regul
 
 `two deterministic gates` · `Qdrant` · `FastAPI` · `191 tests, offline`
 
-→ [github.com/palak178/LLM_Chatbot](https://github.com/palak178/LLM_Chatbot)
+→ [github.com/palak178/ragkit](https://github.com/palak178/ragkit)
 </details>
 
 ---
